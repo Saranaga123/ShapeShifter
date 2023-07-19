@@ -1,0 +1,60 @@
+.logo{
+  animation: move 5s infinite;
+  z-index: 20;
+}
+@keyframes move {
+  0% { opacity:1 ; }
+  50% { opacity:0.2 ; }
+  100% { opacity:1 ; }
+}
+.col-12{
+  width: 100%;
+}
+.col-3{
+  width: 25%;
+}
+.csstest{
+  background-color: aliceblue;
+}
+.center{
+  margin-left: 37.5%;
+  text-align: center;
+}
+.laugh{
+  z-index: -1;
+  position:fixed;
+  bottom:-10%;
+  left: 0;
+  opacity: 0.1;
+  width:300%;
+  animation: movelaugh 30s infinite;
+}
+@keyframes movelaugh {
+  0% { left: 0;  }
+  25% { left: -100%;  }
+  50% { left: -200%;  }
+  75% { left: -100%;  }
+  100% { left: 0;  }
+}
+.berserk{
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  font-size: large;
+  filter: drop-shadow(0 -1mm 6mm rgb(0, 0, 0));
+}
+.Signin{
+  position:relative;
+  z-index: 21;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  filter: drop-shadow(0 -1mm 6mm rgb(255, 255, 255));
+
+  animation: move2 5s infinite;
+}
+@keyframes move2 {
+  0% { opacity:1 ; }
+  50% { opacity:0.2 ; }
+  100% { opacity:1 ; }
+}

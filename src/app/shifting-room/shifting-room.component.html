@@ -1,0 +1,25 @@
+<div class="row">
+  <h2 class="whiteText">{{currentStep}}/{{fullCount}}</h2>
+</div>
+<div class="row">
+  <h1 class="whiteText">{{exName}} </h1>
+</div>
+<div class="row tm50">
+  <h3 class="whiteText">Now You're Shape Shifting Your {{exType}} </h3>
+</div>
+<div class="row">
+  <img [src]="imgsrc" width="100%" style="max-height: 300px;" >
+</div>
+<div class="row center" >
+  <h2 class="whiteText">{{reps}} reps, {{sets}} sets  </h2>
+</div>
+<div class="row center divNext"*ngIf="!finish" >
+  <div class="btnNext" (click)="next()">
+    >>
+  </div>
+</div>
+<div *ngIf="finish" class="row center divNext" >
+  <div class="btnNext" (click)="finished()">
+    Finish
+  </div>
+</div>

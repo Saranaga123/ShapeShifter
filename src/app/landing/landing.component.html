@@ -1,0 +1,41 @@
+<div>
+  <img src="../../assets/logo/logo.png" width="75%" style="margin-left:13.5% ;">
+</div>
+<div class="col-12"  >
+   <img src="../../assets/logo/128-1287625_image-freeuse-mexican-pattern-png-grey-and-white.jpg.png" width="300%" class="laugh">
+</div>
+<div class="col-12 Signin">
+  <div class="col-3 center ">
+    <p style=" text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);"(click)="sign()">ShapeShifter<br>SignIn </p>
+  </div>
+</div>
+<div class="col-12 berserk">
+    <p style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); ">BERSERK POINTS (BP): <span style="color: red;font-weight: bolder;font-size:large;">{{BerserkPoints}}</span> </p>
+</div>
+<div class="col-12 berserk">
+  <p style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); ">~SEALS~ </p>
+</div>
+<div class="col-12 berserk" style=" z-index:101 ;">
+  <table border="1" width="100%" >
+    <tr width="100%" height="70px">
+      <td width="33%" style="text-align:center ;" (click)="s1Release()"><img [src]="ssrc1" width="100%"  ><br>10BP</td>
+      <td width="33%" style="text-align:center ;" (click)="s2Release()"><img [src]="ssrc2" width="100%"  ><br>20BP</td>
+      <td width="33%" style="text-align:center ;" (click)="s3Release()"><img [src]="ssrc3" width="100%"  ><br>50BP</td>
+    </tr>
+    <tr width="100%" height="70px">
+      <td width="33%" style="text-align:center ;" (click)="s4Release()"><img [src]="ssrc4" width="100%"  ><br>100BP</td>
+      <td width="33%" style="text-align:center ;" (click)="s5Release()"><img [src]="ssrc5" width="100%"  ><br>100BP</td>
+      <td width="33%" style="text-align:center ;" (click)="s6Release()"><img [src]="ssrc6" width="100%"  ><br>200BP</td>
+    </tr>
+    <tr width="100%" height="70px">
+      <td width="33%" style="text-align:center ;" (click)="s7Release()"><img [src]="ssrc7" width="100%"  ><br>500BP</td>
+      <td width="33%" style="text-align:center ;" (click)="s8Release()"><img [src]="ssrc8" width="100%"  ><br>800BP</td>
+      <td width="33%" style="text-align:center ;"(click)="s9Release()"><img [src]="ssrc9" width="100%"  ><br>1000BP</td>
+    </tr>
+    <tr width="100%" height="70px">
+      <td width="33%" style="text-align:center ;"(click)="s10Release()"><img [src]="ssrc10" width="100%"  ><br>1500BP</td>
+      <td width="33%" style="text-align:center ;"(click)="s11Release()"><img [src]="ssrc11" width="100%"  ><br>2000BP</td>
+      <td width="33%" style="text-align:center ;"(click)="s12Release()"><img [src]="ssrc12" width="100%"  ><br>5000BP</td>
+    </tr>
+  </table>
+</div>
