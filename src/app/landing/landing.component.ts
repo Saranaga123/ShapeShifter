@@ -32,10 +32,50 @@ export class LandingComponent {
   ssrc10:string="../../assets/logo/padlock.png"
   ssrc11:string="../../assets/logo/padlock.png"
   ssrc12:string="../../assets/logo/padlock.png"
+  showBerserkPoints:boolean=false
+  showIcons:boolean=true
+  showSettings:boolean=false
+  bp:string="";
+  day:string="";
+  pop1:boolean=false
 
   ngOnInit(): void {
     // this.createUserData()
     this.createUserData2()
+    this.BerserkPoints=JSON.parse(localStorage.getItem("BerserkPoints")||'0')
+  }
+  Update(){
+    this.pop1=true
+  }
+  activateBerserk(){
+    this.showBerserkPoints=true
+    this.showIcons=false
+    this.showSettings=false
+  }
+  popClear(){
+    this.pop1=false
+  }
+  landingRoom(){
+    this.pop1=false
+    localStorage.setItem("BerserkPoints",(this.bp))
+    localStorage.setItem("daycount",(this.day))
+
+    const numericDay = parseInt(this.day, 10); // Convert the string to an integer
+    const result = (numericDay % 7) + 1;
+    localStorage.setItem("daycount2", result.toString());
+    this.closepop()
+  }
+  activateSettings(){
+    this.showBerserkPoints=false
+    this.showIcons=false
+    this.showSettings=true
+    this.bp=JSON.parse(localStorage.getItem("BerserkPoints")||'0')
+    this.day=JSON.parse(localStorage.getItem("daycount")||'0')
+  }
+  closepop(){
+    this.showBerserkPoints=false
+    this.showIcons=true
+    this.showSettings=false
     this.BerserkPoints=JSON.parse(localStorage.getItem("BerserkPoints")||'0')
   }
   sign(){
