@@ -256,6 +256,8 @@ export class ShiftingRoomComponent {
     }
   }
   next(){
+    console.log("this.BiginCounter1",this.BiginCounter1)
+    console.log("this.EndCounter1",this.EndCounter1)
     if(this.BiginCounter1<this.EndCounter1){
       this.BiginCounter1++
       this.currentStep++
@@ -268,6 +270,24 @@ export class ShiftingRoomComponent {
       this.exName=this.exList[this.BiginCounter2]
       this.imgsrc=this.imgList[this.BiginCounter2]
       this.BiginCounter2++
+    }else{
+      this.finish=true
+      this.exType
+    }
+  }
+  back(){
+    if(this.BiginCounter1<this.EndCounter1){
+      this.BiginCounter1--
+      this.currentStep--
+      this.exName=this.exList[this.BiginCounter1]
+      this.imgsrc=this.imgList[this.BiginCounter1]
+    }else if(this.BiginCounter2<=this.EndCounter2){
+      this.exType=this.exe2
+
+      this.currentStep--
+      this.exName=this.exList[this.BiginCounter2]
+      this.imgsrc=this.imgList[this.BiginCounter2]
+      this.BiginCounter2--
     }else{
       this.finish=true
       this.exType

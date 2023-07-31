@@ -17,6 +17,16 @@
   padding-left: 10px;
   color: #fff;
 }
+.input2 { 
+  background: none;  
+  outline: none;
+  max-width: 100%; 
+  border-radius: 9999px; 
+  font-size: larger;
+  box-shadow: inset 2px 5px 10px rgb(122, 122, 122);
+  padding-left: 10px;
+  color: #fff;
+}
 .col-12{
   width: 100%;
 }

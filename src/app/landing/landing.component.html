@@ -9,12 +9,20 @@
     <p style=" text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);"(click)="sign()">ShapeShifter<br>SignIn </p>
   </div>
 </div>
+<div class="row popup" *ngIf="settingspop" style="text-align: center;">
+  <h2>ALPHA CODE :</h2>
+  <p style="color: white;">User need ALPHA code to access settings.</p>
+  <input placeholder=""  [(ngModel)]="settingKey" class="input2" name="text" type="text" (keyup)="activateSettings()">
+  <div class="row "   > 
+    <h2 class="DAY" style="float: right; margin-right: 20px;" (click)="popClear2()" >Back</h2>
+  </div>
+</div>
 <div *ngIf="showIcons">
   <div class="col-12 berserk" style=" z-index:101 ;">
     <table  width="100%" >
       <tr width="100%" height="70px">
         <td width="33%" style="text-align:center ;" (click)="activateBerserk()"><img src="./../assets/logo/down.png" width="100%"  ><br>Release Seals</td>
-        <td width="33%" style="text-align:center ;" (click)="activateSettings()"><img src="./../assets/logo/rip.png" width="100%"  ><br>Settings</td> 
+        <td width="33%" style="text-align:center ;" (click)="activateSettingsPop()"><img src="./../assets/logo/rip.png" width="100%"  ><br>Settings</td> 
       </tr> 
     </table>
   </div>

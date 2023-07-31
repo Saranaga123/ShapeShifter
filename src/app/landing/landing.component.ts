@@ -38,6 +38,8 @@ export class LandingComponent {
   bp:string="";
   day:string="";
   pop1:boolean=false
+  settingspop:boolean=false;
+  settingKey:string=""
 
   ngOnInit(): void {
     // this.createUserData()
@@ -47,16 +49,20 @@ export class LandingComponent {
   Update(){
     this.pop1=true
   }
+
   activateBerserk(){
+    this.settingspop=false
     this.showBerserkPoints=true
     this.showIcons=false
     this.showSettings=false
   }
   popClear(){
     this.pop1=false
+    this.settingspop=false
   }
   landingRoom(){
     this.pop1=false
+    this.settingspop=false
     localStorage.setItem("BerserkPoints",(this.bp))
     localStorage.setItem("daycount",(this.day))
 
@@ -65,12 +71,22 @@ export class LandingComponent {
     localStorage.setItem("daycount2", result.toString());
     this.closepop()
   }
+  activateSettingsPop(){ 
+    this.settingspop=true
+  }
   activateSettings(){
-    this.showBerserkPoints=false
-    this.showIcons=false
-    this.showSettings=true
-    this.bp=JSON.parse(localStorage.getItem("BerserkPoints")||'0')
-    this.day=JSON.parse(localStorage.getItem("daycount")||'0')
+    if(this.settingKey=="Kk"||this.settingKey=="kk"||this.settingKey=="KK"){
+      this.settingKey=""
+      this.settingspop=false
+      this.showBerserkPoints=false
+      this.showIcons=false
+      this.showSettings=true
+      this.bp=JSON.parse(localStorage.getItem("BerserkPoints")||'0')
+      this.day=JSON.parse(localStorage.getItem("daycount")||'0')
+    } 
+  }
+  popClear2(){
+    this.settingspop=false
   }
   closepop(){
     this.showBerserkPoints=false
